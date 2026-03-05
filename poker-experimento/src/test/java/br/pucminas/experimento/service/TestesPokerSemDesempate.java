@@ -72,9 +72,10 @@ public class TestesPokerSemDesempate {
     private void executarTeste(String descricao, PokerHand.Resultado esperado, String maoJogador, String maoOponente) {
         PokerHand jogador = new PokerHand(maoJogador);
         PokerHand oponente = new PokerHand(maoOponente);
-        assertEquals(descricao + ":", esperado, jogador.compareWith(oponente));
+        assertEquals(esperado, jogador.compareWith(oponente), descricao + ":");
     }
 
 }
+
 
 

@@ -51,13 +51,16 @@ public class AvaliadorDeMao {
         return true;
     }
 
+    public int avaliar(List<Carta> cartas) {
+    return avaliarNivel(cartas);
+}
+
     private boolean isStraight(List<Carta> cartas) {
         List<Integer> valores = cartas.stream()
                 .map(Carta::getValor)
                 .sorted()
                 .collect(Collectors.toList());
 
-        // Ás baixo: A-2-3-4-5
         if (valores.equals(Arrays.asList(2, 3, 4, 5, 14))) return true;
 
         for (int i = 0; i < valores.size() - 1; i++) {
@@ -65,4 +68,5 @@ public class AvaliadorDeMao {
         }
         return true;
     }
+
 }

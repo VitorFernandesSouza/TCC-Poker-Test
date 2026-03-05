@@ -54,9 +54,9 @@ public class AvaliadorDeMao {
     return new ForcaDaMao(avaliarNivel(cartas));
 }
 
-    public int avaliar(List<Carta> cartas) {
+/*    public int avaliar(List<Carta> cartas) {
     return avaliarNivel(cartas);
-}
+}*/
 
     private boolean isStraight(List<Carta> cartas) {
         List<Integer> valores = cartas.stream()
@@ -73,4 +73,5 @@ public class AvaliadorDeMao {
     }
 
 }
+
 

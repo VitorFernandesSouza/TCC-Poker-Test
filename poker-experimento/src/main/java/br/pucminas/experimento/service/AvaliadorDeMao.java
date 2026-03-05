@@ -50,6 +50,9 @@ public class AvaliadorDeMao {
         }
         return true;
     }
+    public ForcaDaMao avaliar(List<Carta> cartas) {
+    return new ForcaDaMao(avaliarNivel(cartas));
+}
 
     public int avaliar(List<Carta> cartas) {
     return avaliarNivel(cartas);
@@ -70,3 +73,4 @@ public class AvaliadorDeMao {
     }
 
 }
+
